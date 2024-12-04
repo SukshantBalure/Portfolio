@@ -26,7 +26,6 @@
 
 
     <style>
-
 		/*======================================
 		//--//-->   ABOUT
 		======================================*/
@@ -66,18 +65,8 @@
 		  color: rgb(255, 255, 255);
 		  overflow: hidden;
 		  white-space: nowrap;
-		  animation: typing 3s steps(20, end) infinite;
-		}
-		
-		#typing-animation:before {
-		  content: "";
-		  /* position: absolute; */
-		  top: 0;
-		  left: 0;
-		  width: 0;
-		  height: 100%;
-		  background-color: #ccc;
-		  animation: typing-cursor 0.5s ease-in-out infinite;
+		  border-right: 2px solid rgba(255, 255, 255, 0.75); /* Cursor effect */
+		  animation: typing 3s steps(20, end), blink-cursor 0.75s step-end infinite;
 		}
 		
 		@keyframes typing {
@@ -89,12 +78,9 @@
 		  }
 		}
 		
-		@keyframes typing-cursor {
-		  from {
-			width: 5px;
-		  }
-		  to {
-			width: 0;
+		@keyframes blink-cursor {
+		  50% {
+			border-color: transparent;
 		  }
 		}
 		
@@ -110,8 +96,8 @@
 		  transform: scale(1.1);
 		}
 		
-		
-		</style>
+	</style>
+	
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
@@ -161,7 +147,7 @@
 
 						// Create an array of typing text
 						const typingTexts = [
-						'A Data Analyst',
+						'A Data Analyst  ',
                         
 						];
 
@@ -448,7 +434,7 @@
 		  </div>
 		</div>
 	  
-		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/about-mebg.png)">
+		<div class="ftco-section ftco-hireme img margin-top" style="background-color: black;">
 			  <!-- <div class="container"> -->
 				  <div class="row justify-content-center">
 					  <div class="col-md-7 ftco-animate text-center">
